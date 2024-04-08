@@ -1,0 +1,72 @@
+h1{
+    color: white;
+    font-size: 60px;
+    font-family: 'Anonymous Pro', sans-serif;
+}
+h2{
+    color: black;
+    font-family: 'Anonymous Pro', sans-serif;
+    margin-left: 5px;
+}
+header{
+    color: white;
+}
+body {
+    background: url(./images/Purple-Visual-Chaos-Technology.jpg) center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    margin: 5%;
+    font-family: 'Anonymous Pro', sans-serif;
+}
+.header{
+    text-align: center;
+}
+img {
+    width: 201.5px;
+    height: 302px;
+    transform: scale(1.5);
+    margin-top: 10px;
+    margin-right: 30px;
+    padding: 5px,5px,5px,5px;
+    border-radius: 20px;
+}
+.members{
+    padding-top: 10px;
+     
+}
+button{
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    padding: 15px 32px;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Anonymous Pro', sans-serif;
+}
+#gtkm{
+    width: 300px;
+    background-color: purple;
+    color: white;
+    font-size: 32px;
+
+}
+section{
+    background:none;
+    width: 100%;
+    padding-bottom:5px;     
+}
+#been,#done,#Interests{
+    background:whitesmoke;
+    width: 100%;
+    margin-bottom:5px;
+}
+
+#about{
+    padding-top: 20px;
+}
+
