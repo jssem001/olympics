@@ -8,64 +8,69 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         @import url('https://fonts.cdnfonts.com/css/anonymous-pro');
-        img {
-        border: 2px solid #ff914d;
-        }
-        .fa-envelope {
-        background: #ff914d;
-        color: white;
-        font-size: 200%;
-        }
-        .fa-linkedin {
-        background: #007bb5;
-        color: white;
-        font-size: 200%;
         
-        
-        }
     </style>
 </head>
-    <!---------description------->
-
-
 <body>
     <header>
-        <nav>
-            <!-- gmail -->
-            <a href = "mailto: ssemwanga18@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-            <!-- linkedIn -->
-            <a href="https://www.linkedin.com/in/joshua-ssemwanga2001/" class="fa fa-linkedin"></a>
-        </nav>    
+        <img style="float: left;" src="images/logo2.png" alt="Maxed out logo">
+        <div class="topnav">
+            <a href="#home">FEED</a>
+            <a href="#news">ATHLETE STORIES</a>
+            <!-- <a href="#contact">Contact</a> -->
+            <div class="topnav-right">
+              <!-- <a href="#search">Search</a>
+              <a href="#about">About</a> -->
+              <p id="demo"></p>
+            </div>
+          </div>   
     </header>
-    <div id="video">
-        <img style="float: right;" src="images/logo.png" alt="Maxed out logo">
-        <iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/y-lSjXn_46I?si=fq_RFKaPRbNTl0gw" 
-        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div> 
-    <div class="buttons">
-        <h1>JOSHUA SSEMWANGA</h1>
-        <header>
-            "The journey is the film" 
-            
-        </header>
-        <section id="about">
+     
+    <div id="feed">
+        <p class="homeHeadings">Social Feed</p>        
+        <section id="mainCon">
+            <p>Main Post Container</p>
             <!--get to know me button, should link to new webpage-->
-            <a href="./myabout.html"> <button id="gtkm"type="button">Get To Know Me!</button></a>
+            <!-- <a href="./myabout.html"> <button id="gtkm"type="button">Get To Know Me!</button></a> -->
         </section>
 
-        <section id="Projects">
+        <section id="postCon1">
+            <p>Post Container 1</p>
             <!-----------projects button will link to GitHub-------->
-            <a href="https://github.com/jssem001" target="_blank">
-            <button type="button">Projects</button></a>
+            <!-- <a href="https://github.com/jssem001" target="_blank">
+            <button type="button">Projects</button></a> -->
         </section>
 
-        <section id="CV">
+        <section id="postCon2">
+            <p>Post Container 2</p>
             <!-----------This links to my CV-------->   
-            <a href="./images/Joshua Ssemwanga Curriculum Vitae.pdf" target="_blank"><button type="button">My Resume</button></a>       
+            <!-- <a href="./images/Joshua Ssemwanga Curriculum Vitae.pdf" target="_blank"><button type="button">My Resume</button></a>        -->
+        </section>
+        <section id="postCon3">
+            <p>Post Container 3</p>
+            <!-----------This links to my CV-------->   
+            <!-- <a href="./images/Joshua Ssemwanga Curriculum Vitae.pdf" target="_blank"><button type="button">My Resume</button></a>        -->
         </section>
     </div>
+    <div id="stories">
+        <p class="homeHeadings">Athletes Stories</p>
+        <div id="videos">
+            <iframe width="280" height="157.50" 
+            src="https://www.youtube.com/embed/y-lSjXn_46I?si=fq_RFKaPRbNTl0gw" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="280" height="157.50" 
+            src="https://www.youtube.com/embed/uN9Y6gi24B4?si=AGCLkW3ZHyyFfEHM&amp;start=71" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="280" height="157.50" 
+            src="https://www.youtube.com/embed/wQjR5DeR0VE?si=6fPKgpKsSEP9y5sf" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div> 
+    </div>
+    
+    <script src="intaract.js"></script>
 </body>
 
     
