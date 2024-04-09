@@ -8,6 +8,10 @@ h2{
     font-family: 'Anonymous Pro', sans-serif;
     margin-left: 5px;
 }
+ul{
+    list-style-type: none;
+    margin-left: 0;
+}
 header{
     background-color: #162654;
     height: 19vh;
@@ -73,9 +77,9 @@ section{
     height: 157.50;
 }
 
-#been,#done,#Interests{
-    background:whitesmoke;
-    width: 100%;
+#comments-list{
+    background:rgb(217, 215, 215);
+    width: 90%;
     margin-bottom:5px;
 }
 
@@ -97,7 +101,21 @@ section{
     border-color: #162654; border-radius: 5px;
     margin-top: 2px;
 }
+
 #postCon1{
+    margin-left: 5%;
+}
+
+#comment-form,#like-button{
+    display: inline-block;
+    margin-top: 2px;
+}
+
+.delete-button{
+    display: inline-block;
+}
+
+.likes-comments{
     margin-left: 5%;
 }
 

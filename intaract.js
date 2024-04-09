@@ -23,19 +23,21 @@ fetch('http://localhost:3000/articles/1')
 })
  .then(data => {
     let likeCount = data.likes
-    document.getElementById('like-count').innerHTML = `${likeCount} likes`    
+    document.getElementById('like-count').innerHTML = `${likeCount}`    
 })
  .catch(error => {
     console.log('An Error occured: ', error)
 })
 
+//GET request to retrieve comments
 fetch('http://localhost:3000/comments')
  .then(response => {
     return response.json()
 })
  .then(data => {
     for(let c of data) {
-    document.getElementById('comments-list').innerHTML += `<li>${c.content}</li>`
+    //document.getElementById('comments-list').innerHTML += `<li>${c.content}  <span id=${c.id} class="delete-button" style='font-size: 10px'> &#10060;</span></li>`
+    document.getElementById('comments-list').innerHTML += `<li id='${c.id}' onclick='deletefunction(this,${c.id})'>${c.content}  <span style='font-size: 10px'> &#10060;</span></li>`
     }
 })
  .catch(error => {
@@ -76,22 +78,57 @@ document.getElementById("like-button").addEventListener('click',function(event){
      .then(data => {
         let likeCount = data.likes
         likeCount++
-        const updatedData = {
-            likes: likeCount
-          }
         return fetch('http://localhost:3000/articles/1', {
             method: 'PATCH',
-            body: JSON.stringify(updatedData),
+            body: JSON.stringify({
+                likes: likeCount
+            }),
             headers: {
                 'Content-type': 'application/json',
                 Accept: 'application/json'
             },
         })
         })
-
         .then((data) => data.json())
         .then((response) => {
-            document.getElementById('like-count').innerHTML = `${likeCount} likes`
+            document.getElementById('like-count').innerHTML = `${likeCount}`
             console.log("Post liked!", response)
         });
 })
+
+//Update Comment
+
+// fetch('https://jsonplaceholder.typicode.com/posts/1', {
+//   method: 'PUT',
+//   body: JSON.stringify({
+//     id: 1,
+//     title: 'foo',
+//     body: 'bar',
+//     userId: 1,
+//   }),
+//   headers: {
+//     'Content-type': 'application/json; charset=UTF-8',
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+//Deleting a comment
+
+
+function deletefunction(el,id){
+    let goneId = id
+    let element = el
+    element.remove()
+    // event.preventDefault()
+    fetch(`http://localhost:3000/comments/${goneId}`, {
+    method: 'DELETE',
+    headers: {
+         'Content-type': 'application/json',
+         Accept: 'application/json'
+     }
+     })
+      .then(response => console.log(response));
+
+
+}

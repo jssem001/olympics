@@ -4,7 +4,7 @@
       "id": "1",
       "name": "Woody",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-      "likes": 19
+      "likes": 26
     },
     {
       "id": "2",
@@ -15,11 +15,6 @@
   ],
   "comments": [
     {
-      "id": "1",
-      "imageId": 1,
-      "content": "What a goal!"
-    },
-    {
       "id": "2",
       "imageId": 2,
       "content": "Fantastic Game"
@@ -28,16 +23,6 @@
       "id": "e327",
       "imageId": 1,
       "content": "awesome content"
-    },
-    {
-      "id": "4e94",
-      "imageId": 1,
-      "content": "new comment"
-    },
-    {
-      "id": "1467",
-      "imageId": 1,
-      "content": "wonderful journalism"
     }
   ]
 }
