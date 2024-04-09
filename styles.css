@@ -23,10 +23,14 @@ body {
     font-family: 'Anonymous Pro', sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
+
 img {
     width: 100px;
     height: 100px;
-    transform: scale(1.5);
+    /* transform: scale(1.5); */
     margin-top: 15px;
     margin-left: 30px;
 }
@@ -50,10 +54,19 @@ button{
 }
 
 section{
-    background:none;
+    background: none;
     width: 100%;
     padding-bottom:5px;     
 }
+
+#logo {
+    width: 100px;
+    height: 100px;
+    transform: scale(1.5); 
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
 #videos {
     margin-left: 5%;
     width: 280;
@@ -86,6 +99,11 @@ section{
 }
 #postCon1{
     margin-left: 5%;
+}
+
+.postHeadline {
+    margin-left: 3px;
+    font-weight: bold;
 }
 
 .members{
@@ -135,4 +153,9 @@ section{
   color: #cecfd0;
   font-size: 22px;
 }
+.tab {
+    overflow: hidden;
+    /* border: 1px solid #ccc;
+    background-color: #f1f1f1; */
+  }
 
