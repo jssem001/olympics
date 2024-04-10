@@ -1,24 +1,24 @@
-// Javascript file
+//Article Page javacript
 
-//GET Request for articles
-fetch('http://localhost:3000/articles')
+//GET Request for main article
+fetch('http://localhost:3000/main')
  .then(response => {
     return response.json()
 })
  .then(data => {
-    for(let x of data) {
-        document.getElementById('latestPost').innerHTML += 
-        `<section id="postCon1">
-        <p class="postHeadline">${x.headline}</p>
-        <img id=postCon3Img src=${x.image} alt="hockey">
-        <p>${x.subhead}</p>
-        </section>`
-        }    
+    
+    for(let k of data){
+        document.getElementById('mainConX').innerHTML += 
+        `<p class="postHeadline">${k.headline}
+        <br><br>${k.story}</p>
+        <img id=mainImg style="float: right;" src=${k.image}>`
+    }
 })
 
 
+
 //GET request for likes
-fetch('http://localhost:3000/articles/1')
+fetch('http://localhost:3000/main/1')
  .then(response => {
     return response.json()
 })
@@ -68,21 +68,21 @@ document.getElementById("comment-form").addEventListener("submit",function(event
 document.getElementById("like-button").addEventListener('click',function(event){
     event.preventDefault()
     
-    fetch('http://localhost:3000/articles/1')
+    fetch('http://localhost:3000/main/1')
      .then(response => {
         return response.json()
         })
      .then(data => {
         let likeCount = data.likes
         likeCount++
-        return fetch('http://localhost:3000/articles/1', {
+        return fetch('http://localhost:3000/main/1', {
             method: 'PATCH',
             body: JSON.stringify({
                 likes: likeCount
             }),
             headers: {
                 'Content-type': 'application/json',
-                Accept: 'application/json'
+                //Accept: 'application/json'
             },
         })
         })
@@ -93,30 +93,6 @@ document.getElementById("like-button").addEventListener('click',function(event){
         });
 })
 
-//New Post
-document.getElementById("newPost").addEventListener("submit",function(event){
-    event.preventDefault()
-    const newheadline = document.getElementById('newHeadline').value
-    const newimage = document.getElementById('image-input').value
-    const newsubhead = document.getElementById('subhead').value
-
-    console.log(newheadline,newimage,newsubhead)
-    fetch('http://localhost:3000/articles', {
-    method: "POST",
-    body: JSON.stringify({
-        headline: newheadline,
-        image: newimage,
-        subhead: newsubhead,
-        likes: 0
-    }),
-    headers: {
-        'Content-type': 'application/json'
-    },
-    })
-    .then((response) => response.json())
-    .then((json) => console.log(json));
-
-})
 
 
 //Deleting a comment
@@ -144,18 +120,18 @@ function deletefunction(el,id){
 //***BONUS FEATURE*** uncomment to use
 
 
-// //PARIS 2024 coundown clock with help from w3school.com
-// let now; let later; let days; let hours; let minutes; let seconds 
-// // Set the date we're counting down to
-// var countDownDate = new Date("Jul 26, 2024 20:24:00").getTime();
-// // Update the count down every 1 second
-// var x = setInterval(() => {    
-// // Get today's date and time
-// now = new Date().getTime();   
-// // Find the distance between now and the count down date
-// later = countDownDate - now;    
-// // Time calculations for days, hours, minutes and seconds
-// days = Math.floor(later / (1000 * 60 * 60 * 24)); hours = Math.floor((later % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-// minutes = Math.floor((later % (1000 * 60 * 60)) / (1000 * 60)); seconds = Math.floor((later % (1000 * 60)) / 1000);  
-// // Display the result in the element with id="paris"
-// document.getElementById("paris").innerHTML = "PARIS 2024 "+ days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";}, 1000);
+//PARIS 2024 coundown clock sourced from w3schools.com (https://www.w3schools.com/howto/howto_js_countdown.asp)
+let now; let later; let days; let hours; let minutes; let seconds 
+// Set the date we're counting down to
+var countDownDate = new Date("Jul 26, 2024 20:24:00").getTime();
+// Update the count down every 1 second
+var x = setInterval(() => {    
+// Get today's date and time
+now = new Date().getTime();   
+// Find the distance between now and the count down date
+later = countDownDate - now;    
+// Time calculations for days, hours, minutes and seconds
+days = Math.floor(later / (1000 * 60 * 60 * 24)); hours = Math.floor((later % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+minutes = Math.floor((later % (1000 * 60 * 60)) / (1000 * 60)); seconds = Math.floor((later % (1000 * 60)) / 1000);  
+// Display the result in the element with id="paris"
+document.getElementById("paris").innerHTML = "PARIS 2024 "+ days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";}, 1000);

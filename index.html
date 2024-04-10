@@ -2,10 +2,11 @@
 <html lang ="en">
 <head>
     <title>Home</title>
-    
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.cdnfonts.com/css/anonymous-pro" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <style>
         @import url('https://fonts.cdnfonts.com/css/anonymous-pro');
     </style>
@@ -22,46 +23,31 @@
           </div>   
     </header>
      <!--Social Feed  -->
-    <div id="feed">
+    <div id="feed" class="feed">
         <p class="homeHeadings">Social Feed</p>        
         <section id="mainCon">
-            <a href="article1.html"><p class="postHeadline">South Sudan Qualify for Paris 2024 Games</a>
-                <br>read about this historic acheivement
-            </p>
-            <img id=mainImg style="float: right;" src="images/southsudanolympics.jpg" alt="basketball">
+            <!-- Holds the main post -->
         </section>
-
-        <!-- <section id="postCon1">
-            <p class="postHeadline">Kenya Rugby Sevens</p>
-            <img id=postCon1Img src="images/rugbysevens.jpg" alt="rugby"> 
-            <p>Kevin Wambua is gearing up Shujaa</p>
-        </section>
-
-        <section id="postCon2">
-            <p class="postHeadline">The Cranes Qualify</p>
-            <img id=postCon2Img src="images/ugcricket.jpg" alt="cricket">
-            <p>Uganda through to T20 WC</p>
-        </section>
-        <section id="postCon3">
-            <p class="postHeadline">SA Women's Hockey</p>
-            <img id=postCon3Img src="images/sahockey.webp" alt="hockey">
-            <p>SA beat Nigeria 9-0</p>
-        </section> -->
+        <!-- smaller posts below -->
         <section id="latestPost">
-            <!-- hold created posts -->
-        </section>
-        <section id="newContainer">
-            <form id="newPost">
-                <input id="newHeadline" class="postHeadline" placeholder="Headline..." type="text">
-                <input type="text" id="image-input" placeholder="image URL">
-                <textarea id="subhead" placeholder="Subheading..."  rows="4" type="text"></textarea>
-                <button type="submit">Add</button>
-            </form>
+            <!-- holds existing and created posts -->
             
         </section>
+        <section id="newContainer">
+                <div id="updateCon"></div>
+                <form id="newPost">
+                    <label for="newHeadline" class="postForm">Write A Post</label>
+                    <input id="newHeadline" class="postForm" placeholder="Headline..." type="text">
+                    <input id="image-input" class="postForm" type="text"  placeholder="Image URL">
+                    <textarea id="subhead" class="postForm" placeholder="Subheading..."  rows="4" type="text"></textarea>
+                    <button  id="postButton" class="postForm" type="submit">Add <i class="fa fa-upload"></i></button>
+                </form>
+                
+        </section>
+        
     </div>
     <!-- Athletes stories -->
-    <div id="stories">
+    <div id="stories" class="stories">
         <p class="homeHeadings">Athletes Stories</p>
         <div id="videos">
             <iframe width="280" height="157.50" 
@@ -79,17 +65,12 @@
         </div> 
     </div>
     <footer>
-        
+        <div id="end">
             <p>BY JOSH SSEMWANGA<br>contact: muwanguzi.ssemwanga@student.moringaschool.com</p>
-           
+        </div>
     </footer>
     
-    <script src="intaract.js"></script>
+    <script src="interact.js"></script>
 </body>
-
-    
-
-    
-
 
 </html>
