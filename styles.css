@@ -20,7 +20,7 @@ header{
 }
 footer {
     background-color: #b3b4b6;
-    height: 30vh;
+    height: 22vh;
     margin: 0;
     padding: 0;
 }
@@ -168,6 +168,7 @@ section{
 .homeHeadings{
     margin-left: auto;
     font-weight: bold;
+    font-size: x-large;
 }
 
 /* Add a black background color to the top navigation */
