@@ -1,33 +1,59 @@
 {
   "articles": [
     {
-      "id": "1",
+      "id": "2",
+      "headline": "SA Women's Hockey",
+      "image": "https://cdn.24.co.za/files/Cms/General/d/9809/c92e46438bd5404ba8ac1f603f206bb0.jpg",
+      "subhead": "SA beat Nigeria 9-0",
       "likes": 0
     },
     {
       "id": "3",
+      "headline": "The Cranes Qualify",
+      "image": "https://images-cricketcom.imgix.net/1702362030817-articleimg?auto=format,compress&w=600",
+      "subhead": "Uganda through to T20 WC",
+      "likes": 0
+    },
+    {
+      "id": "4",
       "headline": "Kenya Rugby Sevens",
       "image": "https://scrummage.co.ke/wp-content/uploads/2022/08/8f_UZzUH.jpg",
       "subhead": "Kevin Wambua is gearing up Shujaa",
       "likes": 26
     },
     {
-      "id": "2",
-      "name": "Buzz Lightyear",
-      "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 14
+      "id": "1",
+      "headline": "South Sudan",
+      "image": "https://cdn.24.co.za/files/Cms/General/d/9809/c92e46438bd5404ba8ac1f603f206bb0.jpg",
+      "subhead": "South S",
+      "likes": 4
     }
   ],
   "comments": [
     {
-      "id": "2",
-      "imageId": 2,
-      "content": "Fantastic Game"
-    },
-    {
       "id": "e327",
       "imageId": 1,
       "content": "awesome content"
+    },
+    {
+      "id": "c271",
+      "imageId": 1,
+      "content": "this works"
+    },
+    {
+      "id": "a273",
+      "imageId": 1,
+      "content": "hii"
+    },
+    {
+      "id": "c248",
+      "imageId": 1,
+      "content": "heeeyyy"
+    },
+    {
+      "id": "c39",
+      "imageId": 1,
+      "content": "another one"
     }
   ]
 }

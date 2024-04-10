@@ -31,7 +31,7 @@
             <img id=mainImg style="float: right;" src="images/southsudanolympics.jpg" alt="basketball">
         </section>
 
-        <section id="postCon1">
+        <!-- <section id="postCon1">
             <p class="postHeadline">Kenya Rugby Sevens</p>
             <img id=postCon1Img src="images/rugbysevens.jpg" alt="rugby"> 
             <p>Kevin Wambua is gearing up Shujaa</p>
@@ -46,11 +46,18 @@
             <p class="postHeadline">SA Women's Hockey</p>
             <img id=postCon3Img src="images/sahockey.webp" alt="hockey">
             <p>SA beat Nigeria 9-0</p>
+        </section> -->
+        <section id="latestPost">
+            <!-- hold created posts -->
         </section>
         <section id="newContainer">
-            <input class="postHeadline" placeholder="Headline..." type="text">
-            <img id=postCon3Img src="images/placeholder.jpg" alt="hold">
-            <input placeholder="Subheading..." type="text" id="subhead">
+            <form id="newPost">
+                <input id="newHeadline" class="postHeadline" placeholder="Headline..." type="text">
+                <input type="text" id="image-input" placeholder="image URL">
+                <textarea id="subhead" placeholder="Subheading..."  rows="4" type="text"></textarea>
+                <button type="submit">Add</button>
+            </form>
+            
         </section>
     </div>
     <!-- Athletes stories -->
