@@ -44,6 +44,7 @@ fetch('http://localhost:3000/comments')
     console.log('An Error occured: ', error)
 })
 
+//addding a comment
 //POST request for comments 
 document.getElementById("comment-form").addEventListener('submit',function(event){
     event.preventDefault()
@@ -114,8 +115,6 @@ document.getElementById("like-button").addEventListener('click',function(event){
 //   .then((json) => console.log(json));
 
 //Deleting a comment
-
-
 function deletefunction(el,id){
     let goneId = id
     let element = el

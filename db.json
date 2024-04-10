@@ -2,8 +2,13 @@
   "articles": [
     {
       "id": "1",
-      "name": "Woody",
-      "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
+      "likes": 0
+    },
+    {
+      "id": "3",
+      "headline": "Kenya Rugby Sevens",
+      "image": "https://scrummage.co.ke/wp-content/uploads/2022/08/8f_UZzUH.jpg",
+      "subhead": "Kevin Wambua is gearing up Shujaa",
       "likes": 26
     },
     {
