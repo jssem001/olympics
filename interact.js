@@ -1,7 +1,7 @@
 // Javascript file
 
 //GET Request for main article
-fetch('http://localhost:5000/main')
+fetch('https://olympics-2tbr.onrender.com/main')
  .then(response => {
     return response.json()
 })
@@ -18,7 +18,7 @@ fetch('http://localhost:5000/main')
 
 
 //GET Request for articles
-fetch('http://localhost:5000/articles')
+fetch('https://olympics-2tbr.onrender.com/articles')
  .then(response => {
     return response.json()
 })
@@ -42,7 +42,7 @@ document.getElementById("newPost").addEventListener("submit",function(event){
     const newsubhead = document.getElementById('subhead').value
     let newid = Math.floor(Math.random() * 1000)
     console.log(newheadline,newimage,newsubhead)
-    fetch('http://localhost:5000/articles', {
+    fetch('https://olympics-2tbr.onrender.com/articles', {
     method: "POST",
     body: JSON.stringify({
         id: `${newid}`,
@@ -62,7 +62,7 @@ document.getElementById("newPost").addEventListener("submit",function(event){
 
 //Update Post
 function editPost(id){
-    fetch(`http://localhost:5000/articles/${id}`)
+    fetch(`https://olympics-2tbr.onrender.com/articles/${id}`)
      .then(response => {
         return response.json()
     })
@@ -87,7 +87,7 @@ function update_post(id){
     const newsubhead = document.getElementById('updateSubhead').value
 
     console.log(newheadline,newimage,newsubhead)
-    fetch(`http://localhost:5000/articles/${id}`, {
+    fetch(`https://olympics-2tbr.onrender.com/articles/${id}`, {
     method: "PATCH",
     body: JSON.stringify({
         headline: newheadline,

@@ -1,7 +1,7 @@
 //Article Page javacript
 
 //GET Request for main article
-fetch('http://localhost:5000/main')
+fetch('https://olympics-2tbr.onrender.com/main')
  .then(response => {
     return response.json()
 })
@@ -18,7 +18,7 @@ fetch('http://localhost:5000/main')
 
 
 //GET request for likes
-fetch('http://localhost:5000/main/1')
+fetch('https://olympics-2tbr.onrender.com/main/1')
  .then(response => {
     return response.json()
 })
@@ -29,7 +29,7 @@ fetch('http://localhost:5000/main/1')
 
 
 //GET request to retrieve comments
-fetch('http://localhost:5000/comments')
+fetch('https://olympics-2tbr.onrender.com/comments')
  .then(response => {
     return response.json()
 })
@@ -47,7 +47,7 @@ document.getElementById("comment-form").addEventListener("submit",function(event
     let comment = document.getElementById('comment').value 
     let newid = Math.floor(Math.random() * 1000)
     console.log(comment)
-    fetch('http://localhost:5000/comments', {
+    fetch('https://olympics-2tbr.onrender.com/comments', {
         method: "POST",
         body: JSON.stringify({
             id: `c${newid}`,
@@ -68,14 +68,14 @@ document.getElementById("comment-form").addEventListener("submit",function(event
 document.getElementById("like-button").addEventListener('click',function(event){
     event.preventDefault()
     
-    fetch('http://localhost:5000/main/1')
+    fetch('https://olympics-2tbr.onrender.com/main/1')
      .then(response => {
         return response.json()
         })
      .then(data => {
         let likeCount = data.likes
         likeCount++
-        return fetch('http://localhost:5000/main/1', {
+        return fetch('https://olympics-2tbr.onrender.com/main/1', {
             method: 'PATCH',
             body: JSON.stringify({
                 likes: likeCount
@@ -101,7 +101,7 @@ function deletefunction(el,id){
     let element = el
     element.remove()
     // event.preventDefault()
-    fetch(`http://localhost:5000/comments/${goneId}`, {
+    fetch(`https://olympics-2tbr.onrender.com/comments/${goneId}`, {
     method: 'DELETE',
     headers: {
          'Content-type': 'application/json',
