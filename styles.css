@@ -30,12 +30,13 @@ body {
     background-attachment: fixed;
     padding: 0;
     margin: 0;
-    font-family: 'Anonymous Pro', sans-serif;
+    font-family: 'Helvetica', sans-serif;
 }
 
 a{
     text-decoration: none;
 }
+
 
 
 nav {
@@ -70,6 +71,7 @@ section{
     height: 150px;
     width: 280px;
     margin-left: 18px;
+    border-radius: 5px;
 }
 
 #mainImg {
@@ -78,11 +80,10 @@ section{
     margin-left: 100px;
     margin-right: 10px;
     margin-top: 20px;
-    
+    border-radius: 5px;
 }
 
 #paris{
-    /* font-weight: bold; */
     color: #ffffff;
     font-family: 'Norwester', sans-serif;
 }
@@ -110,7 +111,7 @@ section{
 #mainCon,#mainConX{
     width: auto; height: 350px;
     background-color: #ffffff; color:black;
-    font-size: 32px; margin-left: auto;
+    font-size: 18px; margin-left: auto;
     margin-right: auto; /*display:block; */
     border-style:solid; border-width: 2px;
     border-color: #162654; border-radius: 5px;
@@ -172,11 +173,25 @@ section{
 .postHeadline {
     margin-left: 3px;
     font-weight: bold;
+    font-size: 32px;
+    font-family: 'Lato';
+}
+
+
+.postHeadline:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.postHeadline:hover {
+    font-size: 33px;
+    /* color: rgb(240, 178, 9); */
 }
 
 .homeHeadings{
     margin-left: auto;
-    font-weight: bold;
+    font-weight: normal;
+    font-family: 'Norwester', sans-serif;
     font-size: x-large;
 }
 

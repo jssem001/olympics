@@ -9,8 +9,8 @@ fetch('https://olympics-2tbr.onrender.com/main')
     for(let y of data) {
         
         document.getElementById('mainCon').innerHTML += 
-        `<a href="article1.html"><p class="postHeadline">${y.headline}</a>
-        <br>${y.subhead}</p>
+        `<a href="article1.html" class="postHeadline"><p>${y.headline}</a>
+        <br><br>${y.subhead}</p>
         <img id=mainImg style="float: right;" src=${y.image}>`;    
     }
     
