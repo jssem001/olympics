@@ -113,19 +113,39 @@ function deletefunction(el,id){
 
 }
 
+//***Navbar scroll***
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the topbar
+let navbar = document.getElementById("topbar");
+
+// Get the offset position of the topbar
+let stick = navbar.offsetTop;
+
+// Add the stick class to the navbar when you reach its scroll position. Remove "stick" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= stick) {
+    navbar.classList.add("stick")
+  } else {
+    navbar.classList.remove("stick");
+  }
+}
 
 
 
 
-//***BONUS FEATURE*** uncomment to use
+
+//***Countdown Feature*** 
 
 
 //PARIS 2024 coundown clock sourced from w3schools.com (https://www.w3schools.com/howto/howto_js_countdown.asp)
 let now; let later; let days; let hours; let minutes; let seconds 
 // Set the date we're counting down to
-var countDownDate = new Date("Jul 26, 2024 20:24:00").getTime();
+let countDownDate = new Date("Jul 26, 2024 20:24:00").getTime();
 // Update the count down every 1 second
-var x = setInterval(() => {    
+let x = setInterval(() => {    
 // Get today's date and time
 now = new Date().getTime();   
 // Find the distance between now and the count down date

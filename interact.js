@@ -104,6 +104,25 @@ function update_post(id){
     
 }
 
+//***Navbar scroll***
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the topbar
+let navbar = document.getElementById("topbar");
+
+// Get the offset position of the topbar
+let stick = navbar.offsetTop;
+
+// Add the stick class to the navbar when you reach its scroll position. Remove "stick" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= stick) {
+    navbar.classList.add("stick")
+  } else {
+    navbar.classList.remove("stick");
+  }
+}
 
 
 
@@ -115,15 +134,16 @@ function update_post(id){
 
 
 
-//***BONUS FEATURE*** uncomment to use
+
+//***Countdown Feature*** 
 
 
 //PARIS 2024 coundown clock with help from w3school.com
 let now; let later; let days; let hours; let minutes; let seconds 
 // Set the date we're counting down to
-var countDownDate = new Date("Jul 26, 2024 20:24:00").getTime();
+let countDownDate = new Date("Jul 26, 2024 20:24:00").getTime();
 // Update the count down every 1 second
-var x = setInterval(() => {    
+let x = setInterval(() => {    
 // Get today's date and time
 now = new Date().getTime();   
 // Find the distance between now and the count down date
@@ -132,4 +152,4 @@ later = countDownDate - now;
 days = Math.floor(later / (1000 * 60 * 60 * 24)); hours = Math.floor((later % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 minutes = Math.floor((later % (1000 * 60 * 60)) / (1000 * 60)); seconds = Math.floor((later % (1000 * 60)) / 1000);  
 // Display the result in the element with id="paris"
-document.getElementById("paris").innerHTML = "PARIS 2024 "+ days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";}, 1000);
+document.getElementById("paris").innerHTML = "PARIS 2024 " + days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";}, 1000);
