@@ -44,12 +44,12 @@ nav {
     color: #ffffff;
 }
 button{
-    background-color: rgb(51, 119, 178);
+    background-color: #162654;
     border: none;
     border-radius: 5px;
     color: rgb(255, 255, 255);
     padding: 15px 32px;
-    width: 150px;
+    width: 130px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -166,8 +166,8 @@ section{
     display: inline-block;
 }
 
-.likes-comments{
-    margin-left: 5%;
+.like-button{
+    background-color: rgb(240, 77, 104);
 }
 
 .postHeadline {
