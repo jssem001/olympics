@@ -12,8 +12,7 @@
     - And your application is running.
        
 ## Live link
-Deployed Frontend can be accessed here (https://olympics-2tbr.onrender.com/)  
-Deployed Backend can be accessed here (https://olympics-2tbr.onrender.com/articles)  
+    Website - jssem001.github.io/olympics/ 
 
 
 ## Known Bugs
